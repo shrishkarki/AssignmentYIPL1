@@ -1,0 +1,129 @@
+.header{
+    width: 100%;
+    display: flex;
+    height: 14rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15rem;
+
+
+    // for logo section
+    &__logo {
+        font-size: 2.4rem;
+        color:$color-tertiary-average;
+        font-weight: 700;
+      
+
+        span{
+            display: inline-block;
+            font-size: 2.6rem;
+            color: $color-white;
+            height: 4.1rem;
+            width: 4.1rem;
+            background-color:$color-tertiary-dark;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 0.3rem;
+        }
+    }
+
+    &__dropdown{
+        display: block;
+        
+    }
+
+    
+
+    &-toggle {
+       
+       display: block;
+
+       @include media-query($laptops){
+        display: none;
+       }
+        label i{
+        font-size: 3rem;
+ }
+ input[type="checkbox"] {
+    display: none; 
+  }
+
+//   input[type="checkbox"]:checked  input[type="checkbox"] {
+//     display: block;
+//   }
+
+
+}
+
+    
+    &__navigation{
+        display: none;
+        
+        @include media-query($laptops){
+            display: block;
+        }
+
+            &__navigation--list{
+
+        //         display:none;
+
+        //          @include media-query($laptops){
+        //     display: flex;
+        // }
+
+       
+        list-style-type: none;
+        font-size:1.8rem ;
+        color: $color-tertiary-light;
+        font-weight: 500;
+
+        li:hover{
+            cursor: pointer;
+        }
+
+
+       li:not(:last-child){
+        margin-right: 4rem;
+       }
+        
+    }
+        &--list{
+            
+           
+                    display: flex;
+               
+            list-style-type: none;
+            font-size:1.8rem ;
+            color: $color-tertiary-light;
+            font-weight: 500;
+    
+            li:hover{
+                cursor: pointer;
+            }
+    
+    
+           li:not(:last-child){
+            margin-right: 4rem;
+           }
+            
+        }
+    }
+
+    input[type="checkbox"]:checked label{
+        display: none;
+    }
+
+
+   
+
+    @include media-query($laptops){
+        padding: 0 8rem;
+    }
+    @include media-query($large-laptops){
+        padding: 0 15rem;
+      }
+
+    // @include media-query($)
+
+}
+

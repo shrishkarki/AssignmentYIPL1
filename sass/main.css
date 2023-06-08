@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;1,800&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Mulish";
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  height: 14rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15rem;
+}
+.header__logo {
+  font-size: 2.4rem;
+  color: #233348;
+  font-weight: 700;
+}
+.header__logo span {
+  display: inline-block;
+  font-size: 2.6rem;
+  color: #ffffff;
+  height: 4.1rem;
+  width: 4.1rem;
+  background-color: #458ff6;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 0.3rem;
+}
+.header__dropdown {
+  display: block;
+}
+.header-toggle {
+  display: block;
+}
+@media (min-width: 992px) {
+  .header-toggle {
+    display: none;
+  }
+}
+.header-toggle label i {
+  font-size: 3rem;
+}
+.header-toggle input[type=checkbox] {
+  display: none;
+}
+.header__navigation {
+  display: none;
+}
+@media (min-width: 992px) {
+  .header__navigation {
+    display: block;
+  }
+}
+.header__navigation__navigation--list {
+  list-style-type: none;
+  font-size: 1.8rem;
+  color: #7d7987;
+  font-weight: 500;
+}
+.header__navigation__navigation--list li:hover {
+  cursor: pointer;
+}
+.header__navigation__navigation--list li:not(:last-child) {
+  margin-right: 4rem;
+}
+.header__navigation--list {
+  display: flex;
+  list-style-type: none;
+  font-size: 1.8rem;
+  color: #7d7987;
+  font-weight: 500;
+}
+.header__navigation--list li:hover {
+  cursor: pointer;
+}
+.header__navigation--list li:not(:last-child) {
+  margin-right: 4rem;
+}
+.header input[type=checkbox]:checked label {
+  display: none;
+}
+@media (min-width: 992px) {
+  .header {
+    padding: 0 8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    padding: 0 15rem;
+  }
+}
+
+.section {
+  display: flex;
+  padding: 0 15rem;
+}
+.section-about {
+  padding-top: 11rem;
+  margin-left: 3rem;
+  margin-right: 7.5rem;
+}
+.section-about h1 {
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 5.6rem;
+}
+.section-about p {
+  font-weight: 300;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  color: #7d7987;
+  margin-top: 2.5rem;
+}
+.section-about button {
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 700;
+  width: 20rem;
+  height: 6rem;
+  border-radius: 10rem;
+  background-color: #458ff6;
+  color: #ffffff;
+  border: none;
+  margin-top: 4.5rem;
+}
+.section__image img {
+  width: 69rem;
+  height: 59rem;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 19rem;
+  position: relative;
+}
+.services__firstrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.services__header {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  color: #000000;
+}
+.services__underline {
+  border: 2px solid black;
+  width: 5.6rem;
+  margin: 2.6rem;
+}
+.services__details {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-weight: 300;
+  color: #7d7987;
+  width: 95rem;
+  text-align: center;
+}
+.services__types {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  place-items: center;
+  grid-gap: 3.4rem 3.7rem;
+  width: 100%;
+  height: auto;
+}
+.services__overlays {
+  background-image: url("../../img/bgOverlay.png");
+  background-repeat: no-repeat;
+}
+.services__info {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 2rem;
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  padding-left: 3.9rem;
+  padding-right: 4.5rem;
+  background-color: #ffffff;
+}
+.services__info-fig img {
+  margin-top: 5.5rem;
+  margin-bottom: 3rem;
+  width: 9.2rem;
+  height: 9rem;
+}
+.services__info-header {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 5.6rem;
+  color: #000000;
+}
+.services__info-about {
+  font-weight: 200;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #7d7987;
+}/*# sourceMappingURL=main.css.map */
