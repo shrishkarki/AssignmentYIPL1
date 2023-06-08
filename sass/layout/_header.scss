@@ -28,7 +28,21 @@
     }
 
     &__dropdown{
-        display: block;
+        display: none;
+        position: fixed;
+        top: 10rem;
+        left: 0;
+        width: 30%;
+        height: 70vh;
+        background-color: $color-white;
+        box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+
+        ul li{
+            text-decoration: none;
+            font-size: 2rem;
+            margin-top: 2.5rem;
+            padding-left: 15rem;
+        }
         
     }
 
@@ -48,9 +62,12 @@
     display: none; 
   }
 
-//   input[type="checkbox"]:checked  input[type="checkbox"] {
-//     display: block;
-//   }
+input[type="checkbox"]:checked + .ham + nav.header__dropdown {
+    display: block;
+  }
+
+
+
 
 
 }
@@ -109,9 +126,10 @@
         }
     }
 
-    input[type="checkbox"]:checked label{
-        display: none;
-    }
+
+    
+
+ 
 
 
    

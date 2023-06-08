@@ -43,7 +43,20 @@ body {
   padding-top: 0.3rem;
 }
 .header__dropdown {
-  display: block;
+  display: none;
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  width: 30%;
+  height: 70vh;
+  background-color: #ffffff;
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+}
+.header__dropdown ul li {
+  text-decoration: none;
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  padding-left: 15rem;
 }
 .header-toggle {
   display: block;
@@ -58,6 +71,9 @@ body {
 }
 .header-toggle input[type=checkbox] {
   display: none;
+}
+.header-toggle input[type=checkbox]:checked + .ham + nav.header__dropdown {
+  display: block;
 }
 .header__navigation {
   display: none;
@@ -91,9 +107,6 @@ body {
 }
 .header__navigation--list li:not(:last-child) {
   margin-right: 4rem;
-}
-.header input[type=checkbox]:checked label {
-  display: none;
 }
 @media (min-width: 992px) {
   .header {
