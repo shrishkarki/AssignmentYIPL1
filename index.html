@@ -13,7 +13,7 @@
 
 <body>
    
-
+<div class="wrapper">
         <!-- header section -->
         <header class="header">
             <div class="header__logo">
@@ -37,9 +37,15 @@
             <!-- for dropdown -->
             <div class="header-toggle">
                 <input type="checkbox" id="toggle">
-                <label for="toggle" class="ham">
+                <label for="toggle" class="ham open">
                     <i class="fa fa-bars"></i>
+                   
                 </label>
+                <label for="toggle" class="ham close">
+                    <i class="fa  fa-xmark"></i>
+                   
+                </label>
+               
                 <nav class="header__dropdown">
                     <ul class="header__dropdown--list">
                         <li>Home</li>
@@ -58,29 +64,11 @@
 
         </header>
 
-        <main>
+        <main >
             <section class="section">
-                <div class="section-dots">
-                        <!-- <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                   
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                   
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                    
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                    
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/>
-                        <img src="./img/Vector (1).png"/> -->
-                    </div>
+                <!-- <div class="section-dots">
+                        
+                    </div> -->
 
                
                 <div class="section-about">
@@ -180,6 +168,24 @@
                 </div>
 
              
+
+            </section>
+
+
+            <!-- Leading healthcare providers -->
+
+            <section class="healthcare">
+                <figure class="healthcare__image">
+                        <!-- <img src="./img/healthcare.png" alt="healthcare"> -->
+                </figure>
+                <div class="healthcare-about">
+                    <h1 class="healthcare__about-header">Leading healthcare providers</h1>
+                    <div class="healthcare__about-underline"></div>
+                    <p class="healthcare__about-detail">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it's not just work. We take pride 
+                        in the solutions we deliver</p>
+
+                    <button class="healthcare__about-button">Learn more</button>
+                </div>
 
             </section>
         </main>

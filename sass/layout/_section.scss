@@ -1,49 +1,85 @@
 .section {
     display: flex;
-    padding: 0 15rem;
+    padding: 0 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 
-    // &-dots{
-    //     width: 20rem;
-    //     height: 10rem;
-    //    background-color: #2e2946;
-    //    background-image: radial-gradient(
-    //     #ffd400 10px ,
-    //     transparent 6px,
-    //    );
-    //    background-size: 100px 100px;
-    // }
+    @include media-query($landscape-tab){
+        padding: 0 5rem;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
 
+    }
+
+    @include media-query($laptops){
+        padding: 0 15rem;
+    }
+
+    
 
     &-about {
-        padding-top: 11rem;
-        margin-left: 3rem;
-        margin-right: 7.5rem;
+        padding-top: 5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        @include media-query($landscape-tab){
+          padding-top: 7rem;
+          margin-left: 3rem;
+          margin-right: 7.5rem;
+    
+        }
+    
+        @include media-query($laptops){
+            padding-top: 11rem;
+        }
 
         h1 {
-            font-size: 4.8rem;
+            font-size: 3.8rem;
             font-weight: 800;
-            line-height: 5.6rem
+            line-height: 5.6rem;
+
+           @include media-query ($laptops){
+            font-size: 4.3rem;
+           }
+           @include media-query($large-laptops){
+            font-size: 4.8rem;
+           }
+            
         }
 
         p {
             font-weight: 300;
             font-size: 2.2rem;
-            line-height: 3.2rem;
+            line-height: 3rem;
             color: $color-tertiary-light;
-            margin-top: 2.5rem;
+            margin-top: 2rem;
+
+            @include media-query($large-laptops){
+                margin-top: 2.5rem;
+                line-height: 3.2rem;
+            }
         }
 
         button {
             cursor: pointer;
             font-size: 1.8rem;
             font-weight: 700;
-            width: 20rem;
-            height: 6rem;
+            width: 18rem;
+            height: 5rem;
             border-radius: 10rem;
             background-color: $color-tertiary-dark;
             color: $color-white;
             border: none;
-            margin-top: 4.5rem;
+            margin-top: 2rem;
+
+            @include media-query($large-laptops){
+                margin-top: 4.5rem;
+                width: 20rem;
+                height: 6rem;
+            }
 
         }
     }
@@ -51,9 +87,25 @@
     &__image {
 
         img {
-            width: 69rem;
-            height: 59rem;
+            width: 48rem;
+            height: 39rem;
 
+
+            @include media-query($landscape-tab){
+                width: 50rem;
+                height: 42rem;
+            } 
+
+            @include media-query($laptops){
+                width: 55rem;
+                height: 47rem;
+            }
+
+            @include media-query($large-laptops){
+                width: 69rem;
+                height: 59rem;
+    
+            }
         }
     }
 
@@ -65,13 +117,15 @@
 .services {
     display: flex;
     flex-direction: column;
-    // text-align: center;
-    // align-items: center;
-    // justify-content: center;
+    
     width: 100%;
-    margin-top: 19rem;
+    margin-top: 9rem;
     position: relative;
     // margin: 0 0 !important;
+
+   @include media-query($landscape-tab){
+    margin-top: 19rem;
+   }
 
     &__firstrow{
         display: flex;
@@ -102,8 +156,14 @@
         line-height: 3rem;
         font-weight: 300;
         color: $color-tertiary-light;
-        width: 95rem;
+        padding: 0 3rem;
+        
         text-align: center;
+        @include media-query($landscape-tab){
+            width: 95rem;
+            padding: 0;
+            
+        }
     }
 
     // services types
@@ -111,32 +171,29 @@
     &__types {
 
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
+
         justify-content: center;
         place-items: center;
         grid-gap: 3.4rem 3.7rem;
         width: 100%;
         height: auto;
-        // position: relative;
-        // background-image: url('../../img/bgOverlay.png');
-        // background-size: cover;
+        margin-top: 8rem;
+
+        @include media-query($landscape-tab){
+            grid-template-columns: auto auto;
+        }
+
+        @include media-query($laptops){
+            grid-template-columns: auto auto auto;
+        }
+       
         
 
 
        
 
     }
-    // &__types::before{
-    //     content: "";
-    
-    //   position: absolute;
-    //   top: 0px;
-    //   right: 0px;
-    //   bottom: 0px;
-    //   left: 0px;
-    //   opacity: 0.75;
-    //   background-color: rgba(0, 0, 0, 0.1);
-    // }
 
     &__overlays {
        
@@ -170,20 +227,101 @@
 
         &-header {
             font-weight: 700;
-            font-size: 2.4rem;
+            font-size: 2.8rem;
             line-height: 5.6rem;
             color: $color-black;
+
+            @include media-query($large-laptops){
+                font-size: 2.4rem;
+            }
 
         }
 
         &-about {
             font-weight: 200;
-            font-size: 1.6rem;
-            line-height: 2.8rem;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
             color: $color-tertiary-light;
+
+            @include media-query($large-laptops){
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+            }
         }
 
     }
 
 
+}
+
+
+.healthcare{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap:14.2rem ;
+    margin-top: 34.7rem;
+    padding-left:13.5rem ;
+    padding-right: 19.2rem;
+
+    &__image{
+        width: 65rem;
+        height: 47.7rem;
+        background: url("../../img/healthcare.png");
+
+        // @include media-query($laptops){
+        //     width: 55rem;
+        //     height: 45rem;
+
+        // }
+        @include media-query($large-laptops){
+            width: 65rem;
+        height: 47.7rem;
+
+        }
+    }
+
+
+    &__about{
+        // width: 48.1rem;
+        
+
+        &-header{
+            width: 48.1rem;
+            font-size: 3.6rem;
+            // font-weight: 700;
+            color: $color-black;
+            line-height: 5.6rem;
+        }
+
+        &-underline{
+            border: 2px solid black;
+            width: 5.6rem;
+            margin-top: 2.6rem;
+            margin-bottom: 2.6rem;
+            
+        }
+
+        &-detail{
+            width: 45rem;
+            font-weight: 300;
+            font-size: 1.8rem;
+            line-height:3rem;
+            color: $color-tertiary-light;
+
+        }
+        &-button{
+            
+            margin-top: 4rem;
+            width: 20rem;
+            height: 6rem;
+            font-weight: 700;
+            line-height: 6rem;
+            font-size: 18px;
+            color: $color-tertiary-dark;
+            border-radius: 5.5rem;
+            background-color: $color-white;
+            border: 0.14rem solid $color-tertiary-dark;
+
+        }
+    }
 }
