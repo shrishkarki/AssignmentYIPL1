@@ -1,3 +1,4 @@
+
 .header {
     // position: sticky;
     // top: 0;
@@ -8,14 +9,22 @@
     justify-content: space-between;
     padding: 0 6rem;
     background-color: $color-white;
-    z-index: 100;
+    // z-index: 100;
 
     @include media-query($landscape-tab) {
-        padding: 0 8rem;
+        // padding: 0 8rem;
     }
 
-    @include media-query($laptops) {
-        padding: 0 15rem;
+    @include media-query($laptops){
+        padding: 0 7rem;
+    }
+
+    @include media-query($large-laptops) {
+        padding: 0 10rem;
+    }
+
+    @include media-query($extralarge-laptops){
+        padding: 0 19rem;
     }
 
 
@@ -163,13 +172,13 @@
 
 
 
-    @include media-query($laptops) {
-        padding: 0 8rem;
-    }
+    // @include media-query($laptops) {
+    //     padding: 0 8rem;
+    // }
 
-    @include media-query($large-laptops) {
-        padding: 0 15rem;
-    }
+    // @include media-query($large-laptops) {
+    //     padding: 0 15rem;
+    // }
 
    
 
