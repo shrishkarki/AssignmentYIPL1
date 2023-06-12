@@ -55,7 +55,7 @@
             width: 100%;
             
             margin: 1rem 0;
-            border-color: $color-tertiary-light;
+            border-color: $color-tertiary-light !important;
             border-radius: 0.5rem;
 
             // width: 30rem;
@@ -88,7 +88,7 @@
     }
 
     &-email,&-message{
-        @include media-query($laptops){
+        @include media-query($landscape-tab){
             grid-column: 1 / span 2;
         }
     }

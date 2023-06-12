@@ -1402,7 +1402,7 @@ body {
 .contact-form div input, .contact-form textarea {
   width: 100%;
   margin: 1rem 0;
-  border-color: #7d7987;
+  border-color: #7d7987 !important;
   border-radius: 0.5rem;
 }
 .contact-button {
@@ -1462,7 +1462,7 @@ body {
     cursor: pointer;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .contact-email, .contact-message {
     grid-column: 1/span 2;
   }
