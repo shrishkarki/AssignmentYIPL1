@@ -5,13 +5,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
 
-    @include media-query($landscape-tab){
-        padding: 0 8rem;  
+
+    @include media-query($landscape-tab) {
+        padding: 0 8rem;
 
     }
-    @include media-query($laptops){
+
+    @include media-query($laptops) {
         display: flex;
         flex-direction: row;
         justify-content: start;
@@ -19,80 +20,82 @@
         padding: 0 7rem;
     }
 
-    @include media-query($large-laptops){
+    @include media-query($large-laptops) {
         padding: 0 10rem;
     }
 
-    @include media-query($extralarge-laptops){
+    @include media-query($extralarge-laptops) {
         padding: 0 16rem;
     }
 
-    
+
 
     &-about {
         padding-top: 1.8rem;
         // margin-left: 2rem;
         margin-right: 1.2rem;
 
-        @include media-query($large-laptops){
+        @include media-query($large-laptops) {
             padding-top: 2rem;
         }
 
-        @include media-query($landscape-tab){
-          padding-top: 4rem;
-        
-    
+        @include media-query($landscape-tab) {
+            padding-top: 4rem;
+
+
         }
-    
-        @include media-query($laptops){
+
+        @include media-query($laptops) {
             padding-top: 7rem;
-              margin-left: 2rem;
-             margin-right: 2.5rem;
+            margin-left: 2rem;
+            margin-right: 2.5rem;
         }
 
         @include media-query($large-laptops) {
             padding-top: 9rem;
             margin-left: 2rem;
-           margin-right: 5rem;
+            margin-right: 5rem;
         }
 
-        @include media-query($extralarge-laptops){
+        @include media-query($extralarge-laptops) {
             padding-top: 11rem;
             margin-left: 3rem;
-           margin-right: 7.5rem;
+            margin-right: 7.5rem;
         }
 
         h1 {
             font-size: 1.8rem;
             font-weight: 600;
             line-height: 1.4rem;
-            
-            @include media-query($large-phone){
+
+            @include media-query($large-phone) {
                 font-size: 2rem;
                 font-weight: 700;
                 line-height: 1.6rem;
             }
 
-            @include media-query($landscape-tab){
+            @include media-query($landscape-tab) {
                 font-size: 2.5rem;
-                line-height:2.3rem ;
+                line-height: 2.3rem;
                 font-weight: 800;
             }
 
-           @include media-query ($laptops){
-            font-size: 2.8rem;
-            line-height: 3rem;
+            @include media-query ($laptops) {
+                font-size: 2.8rem;
+                line-height: 3rem;
 
-           }
-           @include media-query($large-laptops){
-            font-size: 3.2rem;
-            line-height: 3.8rem;
-           }
-           @include media-query($extralarge-laptops){
-            font-size: 3.8rem;
-            line-height: 5.6rem;
-           }
-            
+            }
+
+            @include media-query($large-laptops) {
+                font-size: 3.2rem;
+                line-height: 3.8rem;
+            }
+
+            @include media-query($extralarge-laptops) {
+                font-size: 3.8rem;
+                line-height: 5.6rem;
+            }
+
         }
 
         p {
@@ -101,32 +104,32 @@
             line-height: 2rem;
             color: $color-tertiary-light;
             margin-top: 1.2rem;
-            
-            @include media-query($large-phone){
+
+            @include media-query($large-phone) {
                 margin-top: 1.3rem;
-                
+
                 line-height: 2.2rem;
             }
 
-            @include media-query($landscape-tab){
+            @include media-query($landscape-tab) {
                 margin-top: 1.5rem;
-            font-size: 1.6rem ;
-            line-height: 2.5rem;
+                font-size: 1.6rem;
+                line-height: 2.5rem;
             }
 
-            @include media-query($laptops){
-                margin-top:1.3rem ;
-                font-size:1.6rem ;
+            @include media-query($laptops) {
+                margin-top: 1.3rem;
+                font-size: 1.6rem;
                 line-height: 2rem;
             }
 
-            @include media-query($large-laptops){
+            @include media-query($large-laptops) {
                 margin-top: 1.8rem;
                 line-height: 2.5rem;
                 font-size: 1.9rem;
             }
 
-            @include media-query($extralarge-laptops){
+            @include media-query($extralarge-laptops) {
                 margin-top: 2.2rem;
                 font-size: 2.1rem;
                 line-height: 3.2rem;
@@ -135,58 +138,69 @@
 
         button {
             cursor: pointer;
-            font-weight: 300;
-            font-size: 1.3rem;
-            width: 11rem;
-            height: 3rem;
+            // font-weight: 300;
+            // font-size: 1.3rem;
+            // width: 11rem;
+            // height: 3rem;
+            // margin-top: 1.4rem;
+            // margin-bottom: 1.8rem;
             border-radius: 10rem;
             background-color: $color-tertiary-dark;
             color: $color-white;
             border: none;
-            margin-top: 1.4rem;
-            margin-bottom: 1.8;
-           
-            @include media-query($large-phone){
-                font-weight: 300;
-                font-size: 1.2rem;
-                width: 12rem;
-                height: 3rem;
-                margin-bottom: 2rem;
+            
+            @include button(300,1.3rem,11rem,3rem,1.4rem,1.8rem);
+
+            @include media-query($large-phone) {
+                // font-weight: 300;
+                // font-size: 1.2rem;
+                // width: 12rem;
+                // height: 3rem;
+                // margin-bottom: 2rem;
+                @include button(300,1.2rem,12rem,3rem,1.4rem,2rem);
             }
 
 
-            @include media-query($landscape-tab){
-                font-weight: 400;
-                font-size: 1.2rem;
-                width: 12rem;
-                height: 3rem;
-                margin-bottom: 2rem;
-                margin-top: 2rem;
+            @include media-query($landscape-tab) {
+                // font-weight: 400;
+                // font-size: 1.2rem;
+                // width: 12rem;
+                // height: 3rem;
+                // margin-bottom: 2rem;
+                // margin-top: 2rem;
+
+                @include button(400,1.2rem,12rem,3rem,2rem,2rem);
 
             }
 
-            @include media-query($laptops){
-                margin-top: 2rem;
-                width: 14rem ;
-                height: 3rem;
-                font-size: 1.3rem;
-                font-weight: 500;
-                margin-bottom: none;
+            @include media-query($laptops) {
+                // margin-top: 2rem;
+                // width: 14rem;
+                // height: 3rem;
+                // font-size: 1.3rem;
+                // font-weight: 500;
+                // margin-bottom: none;
+
+                @include button(500,1.3rem,14rem,3rem,2rem,none);
             }
 
-            @include media-query($large-laptops){
-                margin-top: 3rem;
-                width: 18rem;
-                font-weight: 600;
-            height: 5rem;
-            font-size: 1.8rem;
-                
+            @include media-query($large-laptops) {
+                // margin-top: 3rem;
+                // width: 18rem;
+                // font-weight: 600;
+                // height: 5rem;
+                // font-size: 1.8rem;
+
+                @include button(600,1.8rem,18rem,5rem,3rem,none);
+
             }
-            @include media-query($extralarge-laptops){
-                margin-top: 4.5rem;
-                width: 20rem;
-                height: 6rem;
-                font-weight: 700;
+
+            @include media-query($extralarge-laptops) {
+                // margin-top: 4.5rem;
+                // width: 20rem;
+                // height: 6rem;
+                // font-weight: 700;
+                @include button(700,1.8rem,20rem,6rem,4.5rem,none);
             }
 
         }
@@ -197,31 +211,31 @@
         img {
             width: 29rem;
             height: 25rem;
-            
-            @include media-query($large-phone){
+
+            @include media-query($large-phone) {
                 width: 31rem;
                 height: 28rem;
             }
 
-            @include media-query($landscape-tab){
+            @include media-query($landscape-tab) {
                 width: 35rem;
                 height: 30rem;
-            } 
+            }
 
-            @include media-query($laptops){
+            @include media-query($laptops) {
                 width: 43rem;
                 height: 38rem;
             }
 
-            @include media-query($large-laptops){
-                width:60rem;
+            @include media-query($large-laptops) {
+                width: 60rem;
                 height: 52rem;
             }
 
-            @include media-query($extralarge-laptops){
+            @include media-query($extralarge-laptops) {
                 width: 69rem;
                 height: 59rem;
-    
+
             }
         }
     }
@@ -234,21 +248,21 @@
 .services {
     display: flex;
     flex-direction: column;
-    
+
     width: 100%;
     margin-top: 9rem;
     position: relative;
     // margin: 0 0 !important;
 
-   @include media-query($landscape-tab){
-    margin-top: 10rem;
-   }
+    @include media-query($landscape-tab) {
+        margin-top: 10rem;
+    }
 
-   @include media-query($large-laptops){
-    margin-top: 15rem;
-   }
+    @include media-query($large-laptops) {
+        margin-top: 15rem;
+    }
 
-    &__firstrow{
+    &__firstrow {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -263,12 +277,12 @@
         // padding-bottom:;
 
 
-        @include media-query($laptops){
+        @include media-query($laptops) {
             line-height: 2.5rem;
             font-size: 3rem;
         }
 
-        @include media-query($large-laptops){
+        @include media-query($large-laptops) {
             line-height: 5.5rem;
             font-size: 3.6rem;
         }
@@ -285,13 +299,14 @@
         margin-bottom: 1.5rem;
 
 
-        @include media-query($laptops){
+        @include media-query($laptops) {
             margin-top: 2rem;
             margin-bottom: 2rem;
         }
-        @include media-query($large-laptops){
+
+        @include media-query($large-laptops) {
             margin-top: 2.6rem;
-        margin-bottom: 2.6rem;
+            margin-bottom: 2.6rem;
         }
 
     }
@@ -302,22 +317,22 @@
         font-weight: 300;
         color: $color-tertiary-light;
         padding: 0 3rem;
-        
+
         text-align: center;
         // @include media-query($landscape-tab){
         //     width: 95rem;
         //     padding: 0;
-            
+
         // }
         // @include media-query($laptops){
         //     width: auto;
         // }
 
-        @include media-query($landscape-tab){
+        @include media-query($landscape-tab) {
             font-size: 1.8rem;
         }
 
-        @include media-query($large-laptops){
+        @include media-query($large-laptops) {
             width: 95rem;
         }
     }
@@ -336,33 +351,33 @@
         height: auto;
         margin-top: 4rem;
 
-        @include media-query($landscape-tab){
+        @include media-query($landscape-tab) {
             grid-template-columns: auto auto;
             grid-gap: 3rem 3.3rem;
             margin-top: 8rem;
         }
 
-        @include media-query($laptops){
+        @include media-query($laptops) {
             grid-template-columns: auto auto auto;
             grid-gap: 3.4rem 3.7rem;
         }
-      
-       
-        
 
 
-       
+
+
+
+
 
     }
 
     &__overlays {
-       
+
         background-image: url("../../img/bgOverlay.png");
         background-repeat: no-repeat;
-        
-         }
 
-    
+    }
+
+
 
     &__info {
         // position: relative;
@@ -375,35 +390,35 @@
         background-color: $color-white;
         // opacity: 1;
 
-        @include media-query($laptops){
+        @include media-query($laptops) {
             width: 30rem;
             height: 28rem;
         }
 
-        @include media-query($large-laptops){
+        @include media-query($large-laptops) {
             width: 35rem;
             height: 35rem;
         }
-       
+
 
 
 
         &-fig img {
             margin-top: 2.5rem;
             margin-bottom: 1.5rem;
-                width: 4.2rem;
-                height: 4rem;
-            
-            @include media-query($laptops){
+            width: 4.2rem;
+            height: 4rem;
+
+            @include media-query($laptops) {
                 margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
+                margin-bottom: 1.5rem;
                 width: 5.2rem;
                 height: 6rem;
             }
 
-            @include media-query($large-laptops){
+            @include media-query($large-laptops) {
                 margin-top: 5.5rem;
-            margin-bottom: 3rem;
+                margin-bottom: 3rem;
                 width: 9.2rem;
                 height: 9rem;
             }
@@ -415,19 +430,19 @@
             font-weight: 600;
             color: $color-black;
 
-            @include media-query($laptops){
+            @include media-query($laptops) {
                 font-size: 2rem;
                 line-height: 3.6rem;
                 font-weight: 600;
             }
 
-            @include media-query($large-laptops){
+            @include media-query($large-laptops) {
                 font-size: 2.4rem;
                 line-height: 5.6rem;
                 font-weight: 700;
             }
 
-            
+
 
         }
 
@@ -437,12 +452,12 @@
             line-height: 2.4rem;
             color: $color-tertiary-light;
 
-            @include media-query($laptops){
+            @include media-query($laptops) {
                 font-size: 1.4rem;
                 line-height: 2.4rem;
             }
 
-            @include media-query($large-laptops){
+            @include media-query($large-laptops) {
                 font-size: 1.6rem;
                 line-height: 2.8rem;
             }
@@ -454,148 +469,143 @@
 }
 
 
-.healthcare{
+.healthcare {
     display: grid;
     grid-template-columns: auto;
     place-items: center;
-    grid-column-gap:7rem ;
+    grid-column-gap: 7rem;
     margin-top: 10rem;
-    padding-left:5rem ;
+    padding-left: 5rem;
     padding-right: 3rem;
-    
 
-    @include media-query($landscape-tab){
+
+    @include media-query($landscape-tab) {
         margin-top: 8rem;
         padding-left: 8rem;
         padding-right: 7rem;
     }
 
-    @include media-query($laptops){
+    @include media-query($laptops) {
         grid-template-columns: auto auto;
     }
-    @include media-query($large-laptops){
-        grid-column-gap:7rem;
+
+    @include media-query($large-laptops) {
+        grid-column-gap: 7rem;
         margin-top: 22rem;
 
-        padding-left:10rem;
-        padding-right:9rem;
+        padding-left: 10rem;
+        padding-right: 9rem;
     }
 
-    @include media-query($extralarge-laptops){
-        grid-column-gap:14.2rem ;
+    @include media-query($extralarge-laptops) {
+        grid-column-gap: 14.2rem;
         margin-top: 34.7rem;
-        padding-left:13.5rem ;
+        padding-left: 13.5rem;
         padding-right: 19.2rem;
     }
-   
 
-    &__image{
+
+    &__image {
         width: 30rem;
         height: 20rem;
         background: url("../../img/healthcare.png");
         background-repeat: no-repeat;
         background-size: contain;
 
-        @include media-query($landscape-tab){
+        @include media-query($landscape-tab) {
             width: 40rem;
             height: 32rem;
 
         }
-        @include media-query($laptops){
+
+        @include media-query($laptops) {
             width: 45rem;
-        height: 37rem;
+            height: 37rem;
         }
-        
-        @include media-query($large-laptops){
+
+        @include media-query($large-laptops) {
             width: 55rem;
-        height: 42rem;
+            height: 42rem;
 
         }
-        @include media-query($extralarge-laptops){
+
+        @include media-query($extralarge-laptops) {
             width: 65rem;
             height: 47.7rem;
         }
     }
 
 
-    &__about{
-       
-        
+    &__about {
 
-        &-header{
-            // width: 48.1rem;
+
+
+        &-header {
+
             font-size: 2.5rem;
             font-weight: 600;
             color: $color-black;
             line-height: 3rem;
 
-            @include media-query($landscape-tab){
+            @include media-query($landscape-tab) {
                 font-size: 2.5rem;
                 line-height: 3rem;
-               
+
             }
 
-            @include media-query($laptops){
+            @include media-query($laptops) {
                 font-size: 3rem;
-           
-            color: $color-black;
-            line-height: 4rem;
+
+                color: $color-black;
+                line-height: 4rem;
             }
 
-            @include media-query($large-laptops){
+            @include media-query($large-laptops) {
                 font-size: 3.6rem;
-            font-weight: 700;
-            color: $color-black;
-            line-height: 5.6rem;
+                font-weight: 700;
+                color: $color-black;
+                line-height: 5.6rem;
             }
         }
 
-        &-underline{
+        &-underline {
             border: 2px solid black;
-            width: 4rem;
-            margin-top: 1.4rem;
-            margin-bottom: 1.4rem;
 
-            @include media-query($landscape-tab){
-                width: 4rem;
-                margin-top: 1.4rem;
-                margin-bottom: 1.4rem;
+            @include underline(4rem,1.4rem,1.4rem);
+
+            @include media-query($laptops) {
+                @include underline(4.5,1.8,1.8)
+
             }
 
-            @include media-query($laptops){
-                width: 4.5rem;
-                margin-top: 1.8rem;
-                margin-bottom: 1.8rem;
+            @include media-query($large-laptops) {
+                @include underline(5.6,2.6,2.6)
             }
-            @include media-query($large-laptops){
-                width: 5.6rem;
-                margin-top: 2.6rem;
-                margin-bottom: 2.6rem;
-            }
-            
+
         }
 
-        &-detail{
+        &-detail {
             font-weight: 200;
             font-size: 1.6rem;
-            line-height:2.5rem;
+            line-height: 2.5rem;
             color: $color-tertiary-light;
-            
-            @include media-query($laptops){
+
+            @include media-query($laptops) {
                 font-size: 1.6rem;
                 line-height: 2.5rem;
                 font-weight: 200;
             }
 
-            @include media-query($large-laptops){
+            @include media-query($large-laptops) {
                 font-weight: 300;
                 font-size: 1.8rem;
-                line-height:3rem;
+                line-height: 3rem;
             }
 
         }
-        &-button{
-            
+
+        &-button {
+
             margin-top: 3rem;
             width: 18rem;
             height: 5rem;
@@ -606,7 +616,7 @@
             background-color: $color-white;
             border: 0.14rem solid $color-tertiary-dark;
 
-            @include media-query($large-phone){
+            @include media-query($large-phone) {
                 font-weight: 300;
                 font-size: 1.2rem;
                 width: 12rem;
@@ -615,7 +625,7 @@
             }
 
 
-            @include media-query($landscape-tab){
+            @include media-query($landscape-tab) {
                 font-weight: 400;
                 font-size: 1.2rem;
                 width: 12rem;
@@ -625,9 +635,9 @@
 
             }
 
-            @include media-query($laptops){
+            @include media-query($laptops) {
                 margin-top: 2rem;
-                width: 14rem ;
+                width: 14rem;
                 height: 3rem;
                 font-size: 1.3rem;
                 font-weight: 500;
@@ -635,15 +645,16 @@
             }
 
 
-            @include media-query($large-laptops){
+            @include media-query($large-laptops) {
                 margin-top: 3rem;
                 width: 18rem;
                 font-weight: 600;
-            height: 5rem;
-            font-size: 1.8rem;
-                
+                height: 5rem;
+                font-size: 1.8rem;
+
             }
-            @include media-query($extralarge-laptops){
+
+            @include media-query($extralarge-laptops) {
                 margin-top: 4.5rem;
                 width: 20rem;
                 height: 6rem;
@@ -652,4 +663,334 @@
 
         }
     }
+}
+
+
+// mobile apps
+
+
+.apps {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    grid-column-gap: 7rem;
+    margin-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 3rem;
+    @include media-query($laptops){
+        padding-left: 8rem;
+        padding-right: 4rem;
+        grid-template-columns: auto auto;
+    }
+
+    @include media-query($large-laptops){
+       
+        padding-right: 8rem;
+    }
+
+    @include media-query($extralarge-laptops){
+        padding-left: 2.8rem;
+        padding-right: 16.4rem;
+    }
+
+
+    &__about {
+        &-header {
+
+            @include basic(600,2rem,2rem);
+            @include media-query($landscape-tab){
+                @include basic(700,3rem,3.5rem);
+                
+            }
+
+            @include media-query($laptops){
+                @include basic(700,3.3rem,4rem);
+            }
+
+            @include media-query($large-laptops){
+                @include basic(700,3.6rem,4rem);
+            }
+
+        }
+
+        &-underline {
+            border: 2px solid black;
+            @include underline(3.5rem,1rem,1rem);
+            @include media-query($laptops){
+                @include underline(5.6rem, 3rem, 3rem);
+            }
+           
+
+        }
+
+
+        &-detail {
+            color: $color-tertiary-light;
+
+            @include basic(200,1.3rem,2rem);
+
+            @include media-query($landscape-tab){
+                @include basic(300,1.5rem,2.5rem);
+            }
+            @include media-query($laptops){
+                @include basic(300,1.7rem,2.7rem);
+            }
+            @include media-query($large-laptops){
+                @include basic(300,1.8rem,3rem);
+            }
+
+
+
+        }
+
+        &-button{
+            // margin-top: 3rem;
+            // width: 18rem;
+            // height: 5rem;
+            // font-weight: 600;
+            // font-size: 1.8rem;
+            @include button(600,1.4rem,13rem,3rem,2rem,3rem);
+            color: $color-tertiary-dark;
+            border-radius: 5.5rem;
+            background-color: $color-white;
+            border: 0.14rem solid $color-tertiary-dark;
+
+            @include media-query($landscape-tab){
+                @include button(600,1.6rem,14rem,3rem,2rem,3rem);
+            }
+            @include media-query($laptops){
+                @include button(700,1.7rem,16rem,4rem,2.5rem,3.5rem);
+
+            }
+
+            @include media-query($large-laptops){
+                @include button(700,1.8rem,18rem,5rem,3rem,3rem);
+
+            }
+            @include media-query($extralarge-laptops){
+                @include button(700,2rem,20rem,55.6rem,3.2rem,3.2rem);
+            }
+
+            
+
+            @include media-query($extralarge-laptops){
+                @include button(700,1.8rem,20rem,5.6rem,3.8rem,none);
+            }
+        }
+    }
+
+    &__image {
+        width: 30rem;
+        height: 20rem;
+        background: url("../../img/apps.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include media-query($landscape-tab) {
+            width: 40rem;
+            height: 32rem;
+
+        }
+
+        @include media-query($laptops) {
+            width: 48rem;
+            height: 37rem;
+        }
+
+        @include media-query($large-laptops) {
+            width: 60rem;
+            height: 42rem;
+
+        }
+
+
+        @include media-query($extralarge-laptops){
+            width:66.5rem;
+            height: 43.4rem;
+        }
+    }
+}
+
+
+
+// feedback section
+.carousel{
+padding: 5rem 3rem;
+text-align: center;
+
+// @include media-query($landscape-tab){
+//     padding: 7rem 5rem;
+// }
+@include media-query($laptops){
+    padding:10rem 8rem;
+}
+@include media-query($large-laptops){
+
+    padding:10rem 13rem;
+}
+
+&-buttons{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    height: 4rem;
+
+    @include media-query($laptops){
+        height: 6rem;
+    }
+    
+
+    &-dots{
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        margin:0 1rem ;
+        background-color: $color-tertiary-light;
+
+        @include media-query($laptops){
+            width: 1.5rem;
+            height: 1.5rem;
+            margin:0 2rem ;
+        }
+    }
+}
+
+    
+
+}
+
+.feedback{
+    background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+   padding: 4rem 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    color: $color-white;
+    position: relative;
+    z-index: 100;
+    // overflow: clip;
+
+    .dots-right{
+        max-width: 100px;
+        position: absolute;
+        top: -10px;
+        right: -35px;
+        z-index: 1000;
+        display: none;
+
+        @include media-query($large-phone){
+            display: block;
+        }
+    }
+    .dots-left{
+        max-width: 100px;
+        position: absolute;
+        left: -4rem;
+        bottom: 3rem;
+        display: none;
+        @include media-query($large-phone){
+            display: block;
+        }
+       
+    }
+
+
+    &__header{
+        @include basic(600,2rem,2rem);
+        @include media-query($landscape-tab){
+            @include basic(700,3rem,3.5rem);
+            
+        }
+
+        @include media-query($laptops){
+            @include basic(700,3.3rem,4rem);
+        }
+
+        @include media-query($large-laptops){
+            @include basic(700,3.6rem,4rem);
+        }
+    }
+
+
+    &__underline {
+        
+        border: 1px solid white;
+        @include underline(3.5rem,1rem,1rem);
+        @include media-query($laptops){
+            @include underline(5.6rem, 3rem, 3rem);
+        }
+    }
+
+
+    &__details{
+        @include media-query($laptops){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-userinfo{
+
+                @include media-query($laptops){
+                    text-align: justify;
+                    margin-left: 2rem;
+                }
+               
+            }
+
+        }
+        &-user{
+            figure img{
+                border-radius:50%;
+                margin: 2rem 0;
+            }
+
+            @include media-query($laptops){
+                display: flex;
+                justify-content: space-evenly;
+            align-items: center;
+            }
+        }
+        &-username{
+           @include basic(500,1.5rem,2rem);
+
+           @include media-query($landscape-tab){
+            @include basic(600,1.8rem,2.5rem);
+           }
+            
+        }
+        &-designation{
+            @include basic(500,1.4rem,4rem);
+            color: rgba(255, 255, 255, 0.85);
+
+            @include media-query($landscape-tab){
+                @include basic(600,1.7rem,4.5rem);
+            }
+
+        }
+
+        &-content{
+            color: rgba(255, 255, 255, 0.9);
+            @include basic(500,1.2rem,2rem);
+
+            @include media-query($landscape-tab){
+                @include basic(500,1.5rem,2.3rem);
+            }
+           
+
+            @include media-query($laptops){
+                
+                margin-left: 20rem;
+                width: 40rem;
+                height: 10rem;
+                text-align: justify;
+                @include basic(500,1.7rem,2.7rem);
+            }
+        }
+
+    }
+       
+   
 }

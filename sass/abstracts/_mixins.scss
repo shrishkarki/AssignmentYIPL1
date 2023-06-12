@@ -21,3 +21,28 @@
       @content;
     }
   }
+
+  @mixin basic($fw,$fs,$lh){
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+  }
+
+  @mixin underline($width,$mt,$mb){
+    width: $width;
+    margin-top: $mt;
+    margin-bottom: $mb;
+  }
+
+  @mixin button($font-weight,$font-size,$width,$height,$margin-top,$margin-bottom){
+    font-weight: $font-size;
+    font-size:$font-size;
+    width:$width;
+    height:$height;
+    margin-top: $margin-top;
+    margin-bottom: $margin-bottom;
+    cursor: pointer;
+  }
+
+
+  

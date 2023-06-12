@@ -1,0 +1,131 @@
+.article{
+
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__header{
+        @include basic(600,2.3rem,2rem);
+        @include media-query($landscape-tab){
+            @include basic(700,3rem,3.5rem);
+            
+        }
+
+        @include media-query($laptops){
+            @include basic(700,3.3rem,4rem);
+        }
+
+        @include media-query($large-laptops){
+            @include basic(700,3.6rem,4rem);
+        }
+
+        
+    }
+    &__underline{
+        border: 0.1rem solid black;
+        @include underline(4rem,1rem,1rem);
+        @include media-query($laptops){
+            @include underline(5.6rem, 3rem, 3rem);
+        }
+    }
+
+    &-types{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto;
+        place-items: center;
+        // @include media-query($large-phone){
+        //     padding: 5rem;
+        // }
+
+        &-element{
+            position: absolute;
+            top: -1rem;
+            left: 3rem;
+            display: none;
+
+            @include media-query($landscape-tab){
+                display: block;
+            }
+            // max-width: 100px;
+        }
+       
+
+        @include media-query($landscape-tab){
+            grid-template-columns: auto auto;
+            padding: 3rem;
+           
+        }
+        @include media-query($laptops){
+            grid-template-columns: auto auto auto;
+            padding:0rem 5rem;
+        }
+    }
+
+    &__info{
+        margin:3rem 0;
+        width: 85%;
+        box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+        border-radius: 20px;
+        div{
+            padding: 3rem 3rem;
+        }
+
+
+        &-fig img{
+            width: 100%;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+        }
+        &-header{
+            margin-bottom: 1rem;
+            @include basic(600,1.7rem,2.7rem);
+        }
+        &-about{
+            color: $color-tertiary-light;
+            @include basic(300,1.3rem,2rem)
+        }
+
+        &-button{
+           border: none;
+           outline: none;
+           background-color: white;
+           height: 5rem;
+           display: flex;
+           font-size: 1.7rem;
+           justify-content: center;
+           margin-top: 2rem;
+           color: #4089ED;
+           
+
+           img{
+            margin-left:1rem;
+           }
+        }
+    }
+
+
+    &-button{
+        @include button(600,1.4rem,13rem,3rem,2rem,3rem);
+        color: $color-tertiary-dark;
+        border-radius: 5.5rem;
+        background-color: $color-white;
+        border: 0.14rem solid $color-tertiary-dark;
+
+        @include media-query($landscape-tab){
+            @include button(600,1.6rem,14rem,3rem,2rem,3rem);
+        }
+        @include media-query($laptops){
+            @include button(700,1.7rem,16rem,4rem,2.5rem,3.5rem);
+
+        }
+
+        @include media-query($large-laptops){
+            @include button(700,1.8rem,18rem,5rem,3rem,3rem);
+
+        }
+        @include media-query($extralarge-laptops){
+            @include button(700,2rem,20rem,55.6rem,3.2rem,3.2rem);
+        }
+    }
+}
