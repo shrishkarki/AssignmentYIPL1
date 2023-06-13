@@ -815,8 +815,63 @@
 
 // feedback section
 .carousel{
-padding: 5rem 3rem;
+    padding: 5rem 3rem;
 text-align: center;
+position: relative;
+z-index: 10;
+
+&::before{
+    content: " ";
+    background-image: url("../../img/GroupDots.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+   
+    width: 13rem;
+    height: 10rem;
+    position: absolute;
+    right: 3rem;
+    // bottom: 20rem;
+    transform: translate(0,-20%);
+    // overflow-x: hidden;
+    z-index: 20;
+    // outline: 1px solid red;
+
+    display: none;
+
+        @include media-query($laptops){
+            display: block;
+        }
+
+        @include media-query($large-laptops){
+            right: 7.3rem;
+        }
+
+}
+
+    &::after{
+        content: " ";
+        background-image: url("../../img/bulkDots.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+       
+        width: 13rem;
+        height: 10rem;
+        position: absolute;
+        left: 0;
+        bottom: 20rem;
+        transform: translate(30%);
+        z-index: -10;
+        // outline: 1px solid red;
+        display: none;
+
+        @include media-query($laptops){
+            display: block;
+        }
+        @include media-query($large-laptops){
+            left: 4rem;
+        }
+    }
+
 
 // @include media-query($landscape-tab){
 //     padding: 7rem 5rem;
@@ -861,6 +916,21 @@ text-align: center;
 }
 
 .feedback{
+    // &::before{
+    //     content: " ";
+    //     background-image: url("../../img/bulkDots.png");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+       
+    //     width: 13rem;
+    //     height: 10rem;
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 0;
+    //     transform: translate(-35%,-25%);
+    //     z-index: -10;
+    //     outline: 1px solid red;
+    // }
     background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
    padding: 4rem 2rem;
     border-radius: 2rem;
@@ -869,8 +939,8 @@ text-align: center;
    
     align-items: center;
     color: $color-white;
-    position: relative;
-    z-index: 100;
+    // position: relative;
+    // z-index: 10;
     // overflow: clip;
 
     .dots-right{

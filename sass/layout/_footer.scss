@@ -4,16 +4,54 @@
     padding: 10rem 2rem;
     color: $color-white;
     position: relative;
+    // z-index:100;
+
+    &::before{
+        content: " ";
+        background-image: url("../../img/bulkDots.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 13rem;
+        height: 11rem;
+        position: absolute;
+        right: 10rem;
+        transform: translateY(-60%);
+        z-index:-10;
+        display: none;
+
+        @include media-query($laptops){
+            display: block;
+        }
+    }
+
+    &::after{
+        content: " ";
+        background-image: url("../../img/footerLeft.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 12rem;
+        height: 11rem;
+        position: absolute;
+        transform: translateX(-30%);
+        bottom: 0;
+        display: none;
+
+        @include media-query($laptops){
+            display: block;
+        }
+    }
+
+
 
     @include media-query($large-phone) {
         grid-template-columns: auto auto;
-        padding: 10rem 4rem;
+        padding: 10rem 5rem;
         grid-column-gap: 15rem;
 
     }
     @include media-query($laptops){
         grid-template-columns: auto auto auto auto; 
-        padding: 10rem 10rem;
+        padding: 15rem 4rem;
         // grid-column-gap: 10rem;
        
     }
@@ -62,38 +100,38 @@
         margin-top: 1rem;
         @include basic(200, 1.5rem, 2.5rem);
         color: $color-white;
+        @include media-query($large-laptops){
+            @include basic(200, 1.9rem, 3rem);
+            margin-bottom: 3rem;
+        }
     }
 
     &__copyright {
         margin-top: 2rem;
         @include basic(100, 1.4rem, 2rem);
         color: $color-white;
+
+        @include media-query($large-laptops){
+            @include basic(200,1.8rem,2.4rem);
+        }
     }
 
     &__link-head {
         margin: 2rem 0;
         @include basic(300, 2.2rem, 2rem);
+
+        @include media-query($large-laptops){
+            @include basic(500,2.6rem,2.4rem);
+        }
     }
 
     &__link-list li {
         list-style: none;
         margin: 1.7rem 0;
         @include basic(200, 1.5rem, 2rem);
+        @include media-query($large-laptops){
+            @include basic(200, 1.9rem, 2.5rem);
+           
+        }
     }
-    &__dots  {
-        &-left{
-        position: absolute;
-        max-width: 10rem;
-        bottom: 1rem;
-    }
-
-    &-right{
-        position: absolute;
-        max-width: 10rem;
-        right: 1rem;
-        top: -5rem;
-
-    }
-}
-    // &__dots .footer-right
 }

@@ -1,9 +1,39 @@
 .article{
 
     display: flex;
-    // justify-content: center;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    // z-index: -100;
+    z-index: 10;
+
+    &::before{
+        content:" ";
+        background-image: url("../../img/element.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 12rem;
+        height: 11rem;
+        position: absolute;
+        left: 0;
+        top:9.7rem;
+        
+        transform: translate(20%);
+        z-index: -10;
+        display: none;
+
+        @include media-query($laptops){
+            display: block;
+        }
+
+        @include media-query($large-laptops){
+            top: 10.2rem;
+        }
+
+        // outline: 1px solid red;
+
+       
+    }
     &__header{
         @include basic(600,2.3rem,2rem);
         @include media-query($landscape-tab){
@@ -30,13 +60,11 @@
     }
 
     &-types{
-        position: relative;
+        // position: relative;
         display: grid;
         grid-template-columns: auto;
         place-items: center;
-        // @include media-query($large-phone){
-        //     padding: 5rem;
-        // }
+      
 
         &-element{
             position: absolute;
