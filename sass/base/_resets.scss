@@ -9,6 +9,7 @@
 html{
 
   font-size: 62.5%;
+  scroll-behavior: smooth;
     // font-size: 43%;
   // @include media-query($landscape-tab){
   //   font-size:45% ;
@@ -37,6 +38,7 @@ body{
 // // height: 6556px;
 
 background: #FFFFFF;
+
 
 }
 .wrapper{
