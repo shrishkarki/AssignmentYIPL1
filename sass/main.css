@@ -1401,9 +1401,8 @@ body {
 }
 .contact-form div input, .contact-form textarea {
   width: 100%;
+  outline: none;
   margin: 1rem 0;
-  border-color: #7d7987 !important;
-  border-radius: 0.5rem;
 }
 .contact-button {
   font-weight: 1.4rem;
@@ -1466,4 +1465,98 @@ body {
   .contact-email, .contact-message {
     grid-column: 1/span 2;
   }
+}
+
+.footer {
+  display: grid;
+  background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+  padding: 10rem 2rem;
+  color: #ffffff;
+  position: relative;
+}
+@media (min-width: 600px) {
+  .footer {
+    grid-template-columns: auto auto;
+    padding: 10rem 4rem;
+    grid-column-gap: 15rem;
+  }
+}
+@media (min-width: 992px) {
+  .footer {
+    grid-template-columns: auto auto auto auto;
+    padding: 10rem 10rem;
+  }
+}
+.footer__underline {
+  border: 0.1rem solid #ffffff;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 600px) {
+  .footer__underline {
+    display: none;
+  }
+}
+.footer-first-col {
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .footer-first-col {
+    text-align: start;
+  }
+}
+.footer__logo {
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+.footer__logo span {
+  display: inline-block;
+  font-size: 2.6rem;
+  color: #458ff6;
+  height: 4.1rem;
+  width: 4.1rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 0.3rem;
+}
+.footer__detail {
+  margin-top: 1rem;
+  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+}
+.footer__copyright {
+  margin-top: 2rem;
+  font-weight: 100;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #ffffff;
+}
+.footer__link-head {
+  margin: 2rem 0;
+  font-weight: 300;
+  font-size: 2.2rem;
+  line-height: 2rem;
+}
+.footer__link-list li {
+  list-style: none;
+  margin: 1.7rem 0;
+  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.footer__dots-left {
+  position: absolute;
+  max-width: 10rem;
+  bottom: 1rem;
+}
+.footer__dots-right {
+  position: absolute;
+  max-width: 10rem;
+  right: 1rem;
+  top: -5rem;
 }/*# sourceMappingURL=main.css.map */
