@@ -6,6 +6,32 @@
     position: relative;
     // z-index:100;
 
+    &-scrolltop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 7.6rem;
+        height: 7.3rem;
+        list-style: none;
+        text-decoration: none;
+        font-size: 1rem;
+        background-color: #5A98F2;
+        color: $color-white;
+        text-align: center;
+        border-radius: 10rem;
+        position: absolute;
+        right: 0;
+        transform: translate(-100%,-50%);
+
+        img{
+            width: 2.5rem;
+            height: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+    }
+
     &::before{
         content: " ";
         background-image: url("../../img/bulkDots.png");

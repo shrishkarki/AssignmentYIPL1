@@ -14,7 +14,9 @@
 
     <div class="wrapper">
         <!-- header section -->
-        <header class="header">
+        
+      
+        <header class="header" id="home">
             <div class="header__logo">
                 <span>T</span> Trafalgar
             </div>
@@ -23,16 +25,32 @@
 
             <nav class="header__navigation">
                 <ul class="header__navigation--list">
-                    <li>Home</li>
-                    <li>Find a doctor</li>
-                    <li>Apps</li>
-                    <li>Testimonials</li>
-                    <li>About us</li>
+                    <li class="header__navigation-item">
+                        <a class="header__navigation-link" href="#home">Home</a>
+                       
+                    </li>
+                    <li class="header__navigation-item">
+                        <a class="header__navigation-link" href="#findadoctor">Find a doctor</a>
+                       
+                    </li>
+                    <li class="header__navigation-item">
+                        <a class="header__navigation-link" href="#apps">Apps</a>
+                       
+                    </li>
+                    <li class="header__navigation-item">
+                        <a class="header__navigation-link" href="#testimonials"> Testimonials</a>
+                       
+                    </li>
+                    <li class="header__navigation-item">
+                        <a class="header__navigation-link" href="#aboutus">About us</a>
+                       
+                    </li>
                 </ul>
 
             </nav>
 
-
+           
+            
             <!-- for dropdown -->
             <div class="header-toggle">
                 <input type="checkbox" id="toggle">
@@ -45,6 +63,8 @@
 
                 </label>
 
+               
+               
                 <nav class="header__dropdown">
                     <ul class="header__dropdown--list">
                         <li>Home</li>
@@ -55,6 +75,8 @@
                     </ul>
 
                 </nav>
+
+                <!-- <div class="header__backdrop"></div> -->
             </div>
 
 
@@ -89,7 +111,7 @@
 
             <!-- our services -->
 
-            <section class="services">
+            <section class="services" id="findadoctor">
                 <div class="services__firstrow">
                     <h1 class="services__header"> Our services</h1>
                     <div class="services__underline"></div>
@@ -102,7 +124,7 @@
 
 
 
-                <div class="services__types services__overlays">
+                <div class="services__types">
 
                     <!-- search -->
                     <div class="services__info">
@@ -194,7 +216,7 @@
 
 
             <!-- section mobile apps -->
-            <section class="apps">
+            <section class="apps" id="apps">
                 <div class="apps-about">
                     <h1 class="apps__about-header">Download our mobile apps</h1>
                     <div class="apps__about-underline"></div>
@@ -213,7 +235,7 @@
 
 
             <!-- feedback -->
-            <section class="carousel">
+            <section class="carousel" id="testimonials">
 
                 <div class="feedback">
 
@@ -340,7 +362,7 @@
         <div class="contact">
             <h1 class="contact-header">Contact us</h1>
             <div class="contact-underline"></div>
-            <p class="contact-query"> Have any questions? We’d love to hear from you.</p>
+            <p class="contact-query"> Have any questions? We'd love to hear from you.</p>
             <div class="contact-form">
                 <div class="contact-name">
                     <label for="name">Your Name: </label>
@@ -374,7 +396,9 @@
 
         <!-- footer -->
 
-        <footer class="footer">
+        <footer class="footer" id="aboutus">
+
+            <a href="#home" class="footer-scrolltop"> <img src="./img/upward.png" > Scroll to Top</a>
 
             <!-- <img class="footer__dots-right" src="./img/bulkDots.png" alt="footer-right">
             <img class="footer__dots-left" src="./img/footerLeft.png" alt="footer-left"> -->
