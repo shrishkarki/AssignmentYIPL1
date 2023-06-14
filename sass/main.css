@@ -27,16 +27,26 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0;
   width: 100%;
   display: flex;
-  height: 14rem;
+  height: 10rem;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6rem;
+  padding: 0 3rem;
   background-color: #ffffff;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  .header {
+    height: 14rem;
+    padding: 0 6rem;
+  }
 }
 @media (min-width: 992px) {
   .header {
+    position: static;
     padding: 0 7rem;
   }
 }
@@ -67,7 +77,6 @@ body {
   padding-top: 0.3rem;
 }
 .header__dropdown {
-  opacity: 0;
   position: fixed;
   top: 10rem;
   left: 0;
@@ -75,8 +84,10 @@ body {
   height: 90vh;
   background-color: #ffffff;
   box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
   background-color: #ffffff;
+  z-index: 10;
+  transform: translate(-100%);
 }
 @media (min-width: 600px) {
   .header__dropdown {
@@ -88,7 +99,6 @@ body {
   font-size: 2rem;
   margin-top: 4rem;
   padding-left: 7rem;
-  transition: transform 0.3s ease;
 }
 @media (min-width: 1200px) {
   .header__dropdown ul li {
@@ -113,7 +123,7 @@ body {
   display: none;
 }
 .header-toggle input[type=checkbox]:checked ~ .ham + nav.header__dropdown {
-  opacity: 1;
+  transform: translate(0);
 }
 .header-toggle input[type=checkbox]:checked ~ label.close {
   display: block;
@@ -411,6 +421,10 @@ body {
   width: 100%;
   margin-top: 9rem;
   position: relative;
+  background-image: url("../../img/bgOverlay.png");
+  background-repeat: no-repeat;
+  background-position: top 25rem left;
+  background-size: 50% 50rem;
 }
 @media (min-width: 768px) {
   .services {
@@ -504,10 +518,6 @@ body {
     grid-template-columns: auto auto auto;
     grid-gap: 3.4rem 3.7rem;
   }
-}
-.services__overlays {
-  background-image: url("../../img/bgOverlay.png");
-  background-repeat: no-repeat;
 }
 .services__info {
   width: 27rem;
@@ -634,6 +644,7 @@ body {
   background: url("../../img/healthcare.png");
   background-repeat: no-repeat;
   background-size: contain;
+  margin-bottom: 3rem;
 }
 @media (min-width: 768px) {
   .healthcare__image {
@@ -645,6 +656,7 @@ body {
   .healthcare__image {
     width: 45rem;
     height: 37rem;
+    margin-bottom: none;
   }
 }
 @media (min-width: 1200px) {
@@ -727,24 +739,17 @@ body {
   }
 }
 .healthcare__about-button {
-  margin-top: 3rem;
-  width: 18rem;
-  height: 5rem;
-  font-weight: 600;
-  font-size: 1.8rem;
+  font-weight: 1.4rem;
+  font-size: 1.4rem;
+  width: 13rem;
+  height: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
   color: #458ff6;
   border-radius: 5.5rem;
   background-color: #ffffff;
   border: 0.14rem solid #458ff6;
-}
-@media (min-width: 600px) {
-  .healthcare__about-button {
-    font-weight: 300;
-    font-size: 1.2rem;
-    width: 12rem;
-    height: 3rem;
-    margin-bottom: 2rem;
-  }
 }
 @media (min-width: 768px) {
   .healthcare__about-button {
@@ -762,7 +767,7 @@ body {
     width: 14rem;
     height: 3rem;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 300;
     margin-bottom: none;
   }
 }
@@ -920,28 +925,6 @@ body {
     height: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    cursor: pointer;
-  }
-}
-@media (min-width: 1600px) {
-  .apps__about-button {
-    font-weight: 2rem;
-    font-size: 2rem;
-    width: 20rem;
-    height: 55.6rem;
-    margin-top: 3.2rem;
-    margin-bottom: 3.2rem;
-    cursor: pointer;
-  }
-}
-@media (min-width: 1600px) {
-  .apps__about-button {
-    font-weight: 1.8rem;
-    font-size: 1.8rem;
-    width: 20rem;
-    height: 5.6rem;
-    margin-top: 3.8rem;
-    margin-bottom: none;
     cursor: pointer;
   }
 }
@@ -1195,6 +1178,10 @@ body {
   align-items: center;
   position: relative;
   z-index: 10;
+  width: 100%;
+  background-image: url("../../img/bgvector.png");
+  background-repeat: no-repeat;
+  background-position: top 5rem right -15rem;
 }
 .article::before {
   content: " ";
@@ -1213,11 +1200,6 @@ body {
 @media (min-width: 992px) {
   .article::before {
     display: block;
-  }
-}
-@media (min-width: 1200px) {
-  .article::before {
-    top: 10.2rem;
   }
 }
 .article__header {
@@ -1261,45 +1243,58 @@ body {
 }
 .article-types {
   display: grid;
+  width: 100%;
   grid-template-columns: auto;
-  place-items: center;
+  padding: 0 5rem;
+  grid-column-gap: 6rem;
 }
-.article-types-element {
-  position: absolute;
-  top: -1rem;
-  left: 3rem;
-  display: none;
-}
-@media (min-width: 768px) {
-  .article-types-element {
-    display: block;
+@media (min-width: 600px) {
+  .article-types {
+    padding: 0 10rem;
   }
 }
 @media (min-width: 768px) {
   .article-types {
+    padding: 0 4em;
     grid-template-columns: auto auto;
-    padding: 3rem;
+    grid-column-gap: 2rem;
   }
 }
 @media (min-width: 992px) {
   .article-types {
     grid-template-columns: auto auto auto;
-    padding: 0rem 5rem;
+    padding: 0rem 4rem;
   }
 }
 .article__info {
   margin: 3rem 0;
-  width: 85%;
   box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
   border-radius: 20px;
+  background-color: #ffffff;
 }
 .article__info div {
   padding: 3rem 3rem;
 }
 .article__info-fig img {
   width: 100%;
+  height: 25rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+}
+@media (min-width: 600px) {
+  .article__info-fig img {
+    height: 30rem;
+  }
+}
+@media (min-width: 768px) {
+  .article__info-fig img {
+    height: 28rem;
+  }
+}
+@media (min-width: 1200px) {
+  .article__info-fig img {
+    height: 28rem;
+  }
 }
 .article__info-header {
   margin-bottom: 1rem;
@@ -1378,7 +1373,7 @@ body {
     font-weight: 2rem;
     font-size: 2rem;
     width: 20rem;
-    height: 55.6rem;
+    height: 5.6rem;
     margin-top: 3.2rem;
     margin-bottom: 3.2rem;
     cursor: pointer;
@@ -1512,7 +1507,7 @@ body {
     font-weight: 2rem;
     font-size: 2rem;
     width: 20rem;
-    height: 55.6rem;
+    height: 5.6rem;
     margin-top: 3.2rem;
     margin-bottom: 3.2rem;
     cursor: pointer;
@@ -1530,6 +1525,29 @@ body {
   padding: 10rem 2rem;
   color: #ffffff;
   position: relative;
+}
+.footer-scrolltop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7.6rem;
+  height: 7.3rem;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1rem;
+  background-color: #5A98F2;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10rem;
+  position: absolute;
+  right: 0;
+  transform: translate(-100%, -50%);
+}
+.footer-scrolltop img {
+  width: 2.5rem;
+  height: 1.5rem;
+  margin-bottom: 1rem;
 }
 .footer::before {
   content: " ";

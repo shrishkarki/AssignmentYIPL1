@@ -252,7 +252,14 @@
     width: 100%;
     margin-top: 9rem;
     position: relative;
-    // margin: 0 0 !important;
+
+
+    background-image: url("../../img/bgOverlay.png");
+    background-repeat: no-repeat;
+    background-position: top 25rem left;
+    background-size: 50% 50rem;
+
+
 
     @include media-query($landscape-tab) {
         margin-top: 10rem;
@@ -319,14 +326,6 @@
         padding: 0 3rem;
 
         text-align: center;
-        // @include media-query($landscape-tab){
-        //     width: 95rem;
-        //     padding: 0;
-
-        // }
-        // @include media-query($laptops){
-        //     width: auto;
-        // }
 
         @include media-query($landscape-tab) {
             font-size: 1.8rem;
@@ -362,22 +361,9 @@
             grid-gap: 3.4rem 3.7rem;
         }
 
-
-
-
-
-
-
     }
 
-    &__overlays {
-
-        background-image: url("../../img/bgOverlay.png");
-        background-repeat: no-repeat;
-        // background-size: cover;
-        // background-size: 50%;
-
-    }
+   
 
 
 
@@ -513,6 +499,7 @@
         background: url("../../img/healthcare.png");
         background-repeat: no-repeat;
         background-size: contain;
+        margin-bottom: 3rem;
 
         @include media-query($landscape-tab) {
             width: 40rem;
@@ -523,6 +510,7 @@
         @include media-query($laptops) {
             width: 45rem;
             height: 37rem;
+            margin-bottom: none;
         }
 
         @include media-query($large-laptops) {
@@ -608,24 +596,16 @@
 
         &-button {
 
-            margin-top: 3rem;
-            width: 18rem;
-            height: 5rem;
-            font-weight: 600;
-            font-size: 1.8rem;
+            // margin-top: 3rem;
+            // width: 18rem;
+            // height: 5rem;
+            // font-weight: 600;
+            // font-size: 1.8rem;
+            @include button(300,1.4rem,13rem,3rem,2rem,3rem);
             color: $color-tertiary-dark;
             border-radius: 5.5rem;
             background-color: $color-white;
             border: 0.14rem solid $color-tertiary-dark;
-
-            @include media-query($large-phone) {
-                font-weight: 300;
-                font-size: 1.2rem;
-                width: 12rem;
-                height: 3rem;
-                margin-bottom: 2rem;
-            }
-
 
             @include media-query($landscape-tab) {
                 font-weight: 400;
@@ -634,6 +614,8 @@
                 height: 3rem;
                 margin-bottom: 2rem;
                 margin-top: 2rem;
+                
+                // @include button(300,1.2rem,14rem,4rem,none,2rem);
 
             }
 
@@ -642,7 +624,7 @@
                 width: 14rem;
                 height: 3rem;
                 font-size: 1.3rem;
-                font-weight: 500;
+                font-weight: 300;
                 margin-bottom: none;
             }
 
@@ -746,11 +728,6 @@
         }
 
         &-button{
-            // margin-top: 3rem;
-            // width: 18rem;
-            // height: 5rem;
-            // font-weight: 600;
-            // font-size: 1.8rem;
             @include button(600,1.4rem,13rem,3rem,2rem,3rem);
             color: $color-tertiary-dark;
             border-radius: 5.5rem;
@@ -769,15 +746,14 @@
                 @include button(700,1.8rem,18rem,5rem,3rem,3rem);
 
             }
-            @include media-query($extralarge-laptops){
-                @include button(700,2rem,20rem,55.6rem,3.2rem,3.2rem);
-            }
+            // @include media-query($extralarge-laptops){
+            //     @include button(700,2rem,20rem,55.6rem,3.2rem,3.2rem);
+            // }
 
             
 
-            @include media-query($extralarge-laptops){
-                @include button(700,1.8rem,20rem,5.6rem,3.8rem,none);
-            }
+           
+            
         }
     }
 

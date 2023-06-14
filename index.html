@@ -14,7 +14,9 @@
 
     <div class="wrapper">
         <!-- header section -->
-        <header class="header">
+         <div class="wrapper__backdrop"></div>
+      
+        <header class="header" id="home">
             <div class="header__logo">
                 <span>T</span> Trafalgar
             </div>
@@ -47,7 +49,8 @@
 
             </nav>
 
-
+           
+            
             <!-- for dropdown -->
             <div class="header-toggle">
                 <input type="checkbox" id="toggle">
@@ -59,7 +62,7 @@
                     <i class="fa  fa-xmark"></i>
 
                 </label>
-
+               
                 <nav class="header__dropdown">
                     <ul class="header__dropdown--list">
                         <li>Home</li>
@@ -79,7 +82,7 @@
         </header>
 
         <main>
-            <section class="section" id="home">
+            <section class="section">
                 <!-- <div class="section-dots">
                         
                     </div> -->
@@ -117,7 +120,7 @@
 
 
 
-                <div class="services__types services__overlays">
+                <div class="services__types">
 
                     <!-- search -->
                     <div class="services__info">
@@ -353,7 +356,7 @@
         <div class="contact">
             <h1 class="contact-header">Contact us</h1>
             <div class="contact-underline"></div>
-            <p class="contact-query"> Have any questions? We’d love to hear from you.</p>
+            <p class="contact-query"> Have any questions? We'd love to hear from you.</p>
             <div class="contact-form">
                 <div class="contact-name">
                     <label for="name">Your Name: </label>
@@ -388,6 +391,8 @@
         <!-- footer -->
 
         <footer class="footer" id="aboutus">
+
+            <a href="#home" class="footer-scrolltop"> <img src="./img/upward.png" > Scroll to Top</a>
 
             <!-- <img class="footer__dots-right" src="./img/bulkDots.png" alt="footer-right">
             <img class="footer__dots-left" src="./img/footerLeft.png" alt="footer-left"> -->
