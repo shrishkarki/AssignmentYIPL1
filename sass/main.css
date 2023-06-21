@@ -510,7 +510,6 @@ body {
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
-  place-items: center;
   grid-gap: 3.4rem 3.7rem;
   width: 100%;
   height: auto;
@@ -606,6 +605,178 @@ body {
 }
 @media (min-width: 1200px) {
   .services__info-about {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
+
+.solutions {
+  margin-top: 9rem;
+}
+@media (min-width: 768px) {
+  .solutions {
+    margin-top: 10rem;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions {
+    margin-top: 15rem;
+  }
+}
+.solutions__firstrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.solutions__header {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #000000;
+}
+@media (min-width: 992px) {
+  .solutions__header {
+    line-height: 2.5rem;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions__header {
+    line-height: 5.5rem;
+    font-size: 3.6rem;
+  }
+}
+.solutions__underline {
+  border: 2px solid black;
+  width: 5.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 992px) {
+  .solutions__underline {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions__underline {
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
+  }
+}
+.solutions__details {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: 300;
+  color: #7d7987;
+  padding: 0 3rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .solutions__details {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions__details {
+    width: 95rem;
+  }
+}
+.solutions__types {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+.solutions__info {
+  flex: 0 1 50%;
+  min-width: 27rem;
+  height: 25rem;
+  background-color: #ffffff;
+  justify-self: center;
+  border-radius: 2rem;
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  padding-left: 4rem;
+  padding-right: 4.5rem;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .solutions__info {
+    flex: 0 1 calc(50% - 15rem);
+  }
+}
+@media (min-width: 992px) {
+  .solutions__info {
+    flex: 0 1 calc(33.33% - 15rem);
+    min-width: 30rem;
+    height: 28rem;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions__info {
+    min-width: 35rem;
+    height: 35rem;
+  }
+}
+.solutions__info-fig img {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 4.2rem;
+  height: 4rem;
+}
+@media (min-width: 992px) {
+  .solutions__info-fig img {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    width: 5.2rem;
+    height: 6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions__info-fig img {
+    margin-top: 5.5rem;
+    margin-bottom: 3rem;
+    width: 9.2rem;
+    height: 9rem;
+  }
+}
+.solutions__info-header {
+  font-size: 1.8rem;
+  line-height: 3.1rem;
+  font-weight: 600;
+  color: #000000;
+}
+@media (min-width: 992px) {
+  .solutions__info-header {
+    font-size: 2rem;
+    line-height: 3.6rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions__info-header {
+    font-size: 2.4rem;
+    line-height: 5.6rem;
+    font-weight: 700;
+  }
+}
+.solutions__info-about {
+  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: #7d7987;
+}
+@media (min-width: 992px) {
+  .solutions__info-about {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions__info-about {
     font-size: 1.6rem;
     line-height: 2.8rem;
   }
@@ -975,6 +1146,7 @@ body {
   text-align: center;
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 .carousel::before {
   content: " ";
@@ -1062,12 +1234,16 @@ body {
 
 .feedback {
   background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
-  padding: 4rem 2rem;
   border-radius: 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   color: #ffffff;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+.feedback-item {
+  padding: 4rem 2rem;
+  flex: 0 0 100%;
 }
 .feedback__header {
   font-weight: 600;
@@ -1097,6 +1273,7 @@ body {
 }
 .feedback__underline {
   border: 1px solid white;
+  margin: 0 auto;
   width: 3.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
