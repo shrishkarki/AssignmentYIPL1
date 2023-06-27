@@ -1,0 +1,163 @@
+.footer {
+    display: grid;
+    background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+    padding: 10rem 2rem;
+    color: $color-white;
+    position: relative;
+    // z-index:100;
+
+    &-scrolltop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 7.6rem;
+        height: 7.3rem;
+        list-style: none;
+        text-decoration: none;
+        font-size: 1rem;
+        background-color: #5A98F2;
+        color: $color-white;
+        text-align: center;
+        border-radius: 10rem;
+        position: absolute;
+        right: 0;
+        transform: translate(-100%,-50%);
+
+        img{
+            width: 2.5rem;
+            height: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    &::before{
+        content: " ";
+        background-image: url("../../img/bulkDots.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 13rem;
+        height: 11rem;
+        position: absolute;
+        right: 10rem;
+        transform: translateY(-60%);
+        z-index:-10;
+        display: none;
+
+        @include media-query($laptops){
+            display: block;
+        }
+    }
+
+    &::after{
+        content: " ";
+        background-image: url("../../img/footerLeft.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 12rem;
+        height: 11rem;
+        position: absolute;
+        transform: translateX(-30%);
+        bottom: 0;
+        display: none;
+
+        @include media-query($laptops){
+            display: block;
+        }
+    }
+
+
+
+    @include media-query($large-phone) {
+        grid-template-columns: auto auto;
+        padding: 10rem 5rem;
+        grid-column-gap: 15rem;
+
+    }
+    @include media-query($laptops){
+        grid-template-columns: auto auto auto auto; 
+        padding: 15rem 4rem;
+        // grid-column-gap: 10rem;
+       
+    }
+
+    &__underline {
+        border: 0.1rem solid $color-white;
+        @include underline(100%, 1rem, 1rem);
+
+        @include media-query($large-phone) {
+            display: none;
+        }
+
+    }
+
+
+    &-first-col {
+        text-align: center;
+
+        @include media-query($large-phone) {
+            // text-align: justify;
+            // text-justify: inter-word;
+            text-align:start;
+        }
+    }
+
+    &__logo {
+        font-size: 2.4rem;
+        color: $color-white;
+        font-weight: 700;
+
+
+        span {
+            display: inline-block;
+            font-size: 2.6rem;
+            color: $color-tertiary-dark;
+            height: 4.1rem;
+            width: 4.1rem;
+            background-color: $color-white;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 0.3rem;
+        }
+    }
+
+    &__detail {
+        margin-top: 1rem;
+        @include basic(200, 1.5rem, 2.5rem);
+        color: $color-white;
+        @include media-query($large-laptops){
+            @include basic(200, 1.9rem, 3rem);
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__copyright {
+        margin-top: 2rem;
+        @include basic(100, 1.4rem, 2rem);
+        color: $color-white;
+
+        @include media-query($large-laptops){
+            @include basic(200,1.8rem,2.4rem);
+        }
+    }
+
+    &__link-head {
+        margin: 2rem 0;
+        @include basic(300, 2.2rem, 2rem);
+
+        @include media-query($large-laptops){
+            @include basic(500,2.6rem,2.4rem);
+        }
+    }
+
+    &__link-list li {
+        list-style: none;
+        margin: 1.7rem 0;
+        @include basic(200, 1.5rem, 2rem);
+        @include media-query($large-laptops){
+            @include basic(200, 1.9rem, 2.5rem);
+           
+        }
+    }
+}

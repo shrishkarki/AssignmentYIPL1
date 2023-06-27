@@ -1,0 +1,172 @@
+.article{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    // z-index: -100;
+    z-index: 10;
+    width: 100%;
+
+    background-image: url("../../img/bgvector.png");
+    background-repeat: no-repeat;
+    background-position:top 5rem right -15rem ;
+   
+
+    &::before{
+        content:" ";
+        background-image: url("../../img/element.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 12rem;
+        height: 11rem;
+        position: absolute;
+        left: 0;
+        top:9.7rem;
+        
+        transform: translate(20%);
+        z-index: -10;
+        display: none;
+
+        @include media-query($laptops){
+            display: block;
+        }
+
+       
+    }
+    &__header{
+        @include basic(600,2.3rem,2rem);
+        @include media-query($landscape-tab){
+            @include basic(700,3rem,3.5rem);
+            
+        }
+
+        @include media-query($laptops){
+            @include basic(700,3.3rem,4rem);
+        }
+
+        @include media-query($large-laptops){
+            @include basic(700,3.6rem,4rem);
+        }
+
+        
+    }
+    &__underline{
+        border: 0.1rem solid black;
+        @include underline(4rem,1rem,1rem);
+        @include media-query($laptops){
+            @include underline(5.6rem, 3rem, 3rem);
+        }
+    }
+
+    &-types{
+        
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto;
+        padding: 0 5rem;
+        grid-column-gap: 6rem;
+        
+        
+
+        @include media-query($large-phone){
+            padding: 0 10rem;
+        }
+       
+
+        @include media-query($landscape-tab){
+            padding:0 4em;
+            grid-template-columns: auto auto;
+            grid-column-gap: 2rem;
+            
+           
+        }
+        @include media-query($laptops){
+            grid-template-columns: auto auto auto;
+          
+            padding:0rem 4rem;
+        }
+    }
+
+    &__info{
+        margin:3rem 0;
+       
+        box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+        border-radius: 20px;
+        background-color: $color-white;
+
+        div{
+            padding: 3rem 3rem;
+        }
+
+
+        &-fig img{
+            width: 100%;
+            height: 25rem;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+
+            @include media-query($large-phone){
+                height: 30rem;
+            }
+
+            @include media-query($landscape-tab){
+                height: 28rem;
+            }
+
+            @include media-query($large-laptops){
+                height: 28rem;
+            }
+        }
+        &-header{
+            margin-bottom: 1rem;
+            @include basic(600,1.7rem,2.7rem);
+        }
+        &-about{
+            color: $color-tertiary-light;
+            @include basic(300,1.3rem,2rem)
+        }
+
+        &-button{
+           border: none;
+           outline: none;
+           background-color: white;
+           height: 5rem;
+           display: flex;
+           font-size: 1.7rem;
+           justify-content: center;
+           margin-top: 2rem;
+           color: #4089ED;
+           
+
+           img{
+            margin-left:1rem;
+           }
+        }
+    }
+
+
+    &-button{
+        @include button(600,1.4rem,13rem,3rem,2rem,3rem);
+        color: $color-tertiary-dark;
+        border-radius: 5.5rem;
+        background-color: $color-white;
+        border: 0.14rem solid $color-tertiary-dark;
+
+        @include media-query($landscape-tab){
+            @include button(600,1.6rem,14rem,3rem,2rem,3rem);
+        }
+        @include media-query($laptops){
+            @include button(700,1.7rem,16rem,4rem,2.5rem,3.5rem);
+
+        }
+
+        @include media-query($large-laptops){
+            @include button(700,1.8rem,18rem,5rem,3rem,3rem);
+
+        }
+        @include media-query($extralarge-laptops){
+            @include button(700,2rem,20rem,5.6rem,3.2rem,3.2rem);
+        }
+    }
+}

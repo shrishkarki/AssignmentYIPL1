@@ -1,0 +1,99 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    &-header{
+        @include basic(600,2.3rem,2.6rem);
+        @include media-query($landscape-tab){
+            @include basic(700,3rem,3.5rem);
+            
+        }
+
+        @include media-query($laptops){
+            @include basic(700,3.3rem,4rem);
+        }
+
+        @include media-query($large-laptops){
+            @include basic(700,3.6rem,4rem);
+        }
+
+    }
+    &-underline{
+        border: 0.1rem solid black;
+        @include underline(4rem,1rem,1rem);
+        @include media-query($laptops){
+            @include underline(5.6rem, 3rem, 3rem);
+        }
+    
+    }
+    &-query{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        @include basic(300,1.4rem,2.7rem);
+    }
+    &-form{
+        display:grid;
+        grid-template-columns: 30rem;
+
+        @include media-query($landscape-tab){
+            grid-template-columns: 30rem 30rem;
+            grid-column-gap: 3rem;
+        }
+        label{
+            font-size: 1.4rem;
+        }
+        div input[type=text],input[type=number],input[type=email]{
+            height: 4rem;
+        }
+
+        div textarea{
+            height: 20rem;
+        }
+
+        div input,textarea{
+            width: 100%;
+            outline: none;
+            margin: 1rem 0;
+            // border: none;
+            // border-color: $color-tertiary-light;
+            // border-radius: 0.5rem;
+            // border-color: red;
+            
+
+            
+        }
+    }
+
+    &-button{
+        @include button(600,1.4rem,13rem,3rem,2rem,3rem);
+        color: $color-tertiary-dark;
+        border-radius: 5.5rem;
+        background-color: $color-white;
+        border: 0.14rem solid $color-tertiary-dark;
+
+        @include media-query($landscape-tab){
+            @include button(600,1.6rem,14rem,3rem,2rem,3rem);
+        }
+        @include media-query($laptops){
+            @include button(700,1.7rem,16rem,4rem,2.5rem,3.5rem);
+
+        }
+
+        @include media-query($large-laptops){
+            @include button(700,1.8rem,18rem,5rem,3rem,3rem);
+
+        }
+        @include media-query($extralarge-laptops){
+            @include button(700,2rem,20rem,5.6rem,3.2rem,3.2rem);
+        }
+    }
+
+    &-email,&-message{
+        @include media-query($landscape-tab){
+            grid-column: 1 / span 2;
+        }
+    }
+    
+    
+}

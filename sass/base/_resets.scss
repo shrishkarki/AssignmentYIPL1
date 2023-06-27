@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+// *{
+//   outline: 1px solid red;
+// }
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;1,800&display=swap');
+html{
+
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+    // font-size: 43%;
+  // @include media-query($landscape-tab){
+  //   font-size:45% ;
+  // }
+
+   
+    
+  //   @include media-query($large-laptops){
+  //       font-size: 62.5%;
+  //   }
+    
+
+}
+
+body{
+    // font-family: 'Mulish', sans-serif;
+    font-family: 'Mulish';
+    box-sizing: border-box;
+//     overflow-y: hidden; 
+  overflow-x: hidden; 
+    //  padding: 0 15rem;
+
+
+//     position: relative;
+// width: 1600px;
+// // height: 6556px;
+
+background: #FFFFFF;
+
+
+}
+.wrapper{
+ 
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
