@@ -9,7 +9,7 @@ checkbox.addEventListener('click',()=>{
     
 });
 backdrop.addEventListener('click',()=>{
-//    console.log("clicked");
+
     checkbox.checked=false;
     backdrop.classList.toggle('backdrop-display');
     document.body.classList.toggle('overflow-hidden');
