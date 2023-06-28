@@ -26,10 +26,6 @@ body {
   margin-right: auto;
 }
 
-<<<<<<< HEAD
-.header {
-  position: sticky;
-=======
 #backdrop {
   position: fixed;
   left: 0;
@@ -53,7 +49,6 @@ body {
 
 .header {
   position: relative;
->>>>>>> testCarousel
   top: 0;
   width: 100%;
   display: flex;
@@ -102,25 +97,9 @@ body {
   text-align: center;
   padding-top: 0.3rem;
 }
-<<<<<<< HEAD
-.header__backdrop {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-.header__dropdown {
-  position: fixed;
-  top: 10rem;
-=======
 .header__dropdown {
   position: fixed;
   top: 9.5rem;
->>>>>>> testCarousel
   left: 0;
   width: 60%;
   height: 90vh;
@@ -194,8 +173,6 @@ body {
 .header__navigation--list li a:active {
   font-weight: 900;
 }
-<<<<<<< HEAD
-=======
 .header__navigation--list li {
   position: relative;
 }
@@ -205,7 +182,6 @@ body {
 .header__navigation--list li:not(:last-child) {
   margin-right: 4rem;
 }
->>>>>>> testCarousel
 .header__navigation--list li a {
   list-style-type: none;
   font-size: 1.8rem;
@@ -213,13 +189,6 @@ body {
   font-weight: 500;
   text-decoration: none;
 }
-<<<<<<< HEAD
-.header__navigation--list li:hover {
-  cursor: pointer;
-}
-.header__navigation--list li:not(:last-child) {
-  margin-right: 4rem;
-=======
 .header__navigation--list li a::after {
   content: " ";
   position: absolute;
@@ -234,7 +203,6 @@ body {
 }
 .header__navigation--list li a:hover::after {
   transform: scaleX(1);
->>>>>>> testCarousel
 }
 
 .section {
@@ -1208,11 +1176,8 @@ body {
   position: relative;
   z-index: 10;
   width: 100%;
-<<<<<<< HEAD
-=======
   height: 48rem;
   overflow-x: hidden;
->>>>>>> testCarousel
 }
 .carousel::before {
   content: " ";
@@ -1243,10 +1208,6 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   width: 13rem;
-<<<<<<< HEAD
-  height: 10rem;
-=======
->>>>>>> testCarousel
   position: absolute;
   left: 0;
   bottom: 20rem;
@@ -1275,18 +1236,12 @@ body {
   }
 }
 .carousel-buttons {
-<<<<<<< HEAD
-=======
   cursor: pointer;
->>>>>>> testCarousel
   display: flex;
   justify-content: center;
   align-items: center;
   height: 4rem;
-<<<<<<< HEAD
-=======
   margin-bottom: 10rem;
->>>>>>> testCarousel
 }
 @media (min-width: 992px) {
   .carousel-buttons {
@@ -1299,11 +1254,7 @@ body {
   border-radius: 50%;
   margin: 0 1rem;
   background-color: #5393F3;
-<<<<<<< HEAD
-  opacity: 30%;
-=======
   opacity: 50%;
->>>>>>> testCarousel
 }
 @media (min-width: 992px) {
   .carousel-buttons-dots {
@@ -1314,19 +1265,6 @@ body {
 }
 
 .feedback {
-<<<<<<< HEAD
-  background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
-  border-radius: 2rem;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  transition: transform 0.5s ease;
-  overflow: hidden;
-}
-.feedback-item {
-  padding: 4rem 2rem;
-  flex: 0 0 100%;
-=======
   position: relative;
   color: #ffffff;
   transition: transform 0.5s ease;
@@ -1350,7 +1288,6 @@ body {
 }
 .feedback-item-four {
   z-index: 5;
->>>>>>> testCarousel
 }
 .feedback__header {
   font-weight: 600;

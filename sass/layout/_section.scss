@@ -1006,11 +1006,8 @@ text-align: center;
 position: relative;
 z-index: 10;
 width: 100%;
-<<<<<<< HEAD
-=======
 height: 48rem;
 overflow-x: hidden;
->>>>>>> testCarousel
 
 &::before{
     content: " ";
@@ -1022,19 +1019,11 @@ overflow-x: hidden;
     height: 10rem;
     position: absolute;
     right: 3rem;
-<<<<<<< HEAD
-    // bottom: 20rem;
-    transform: translate(0,-20%);
-    // overflow-x: hidden;
-    z-index: 20;
-    // outline: 1px solid red;
-=======
   
     transform: translate(0,-20%);
    
     z-index: 20;
     
->>>>>>> testCarousel
 
     display: none;
 
@@ -1055,21 +1044,12 @@ overflow-x: hidden;
         background-repeat: no-repeat;
        
         width: 13rem;
-<<<<<<< HEAD
-        height: 10rem;
-=======
         // height: 10rem;
->>>>>>> testCarousel
         position: absolute;
         left: 0;
         bottom: 20rem;
         transform: translate(30%);
         z-index: -10;
-<<<<<<< HEAD
-        // outline: 1px solid red;
-=======
-
->>>>>>> testCarousel
         display: none;
 
         @include media-query($laptops){
@@ -1081,13 +1061,6 @@ overflow-x: hidden;
     }
 
 
-<<<<<<< HEAD
-// @include media-query($landscape-tab){
-//     padding: 7rem 5rem;
-// }
-=======
-
->>>>>>> testCarousel
 @include media-query($laptops){
     padding:10rem 8rem;
 }
@@ -1097,19 +1070,13 @@ overflow-x: hidden;
 }
 
 &-buttons{
-<<<<<<< HEAD
-=======
     cursor: pointer;
->>>>>>> testCarousel
     display: flex;
     justify-content: center;
     
     align-items: center;
     height: 4rem;
-<<<<<<< HEAD
-=======
     margin-bottom: 10rem;
->>>>>>> testCarousel
 
     @include media-query($laptops){
         height: 6rem;
@@ -1123,13 +1090,9 @@ overflow-x: hidden;
         margin:0 1rem ;
         // background-color: $color-tertiary-light;
         background-color: #5393F3;
-<<<<<<< HEAD
-        opacity: 30%;
-=======
         opacity: 50%;
 
         
->>>>>>> testCarousel
 
         @include media-query($laptops){
             width: 1.5rem;
@@ -1144,20 +1107,6 @@ overflow-x: hidden;
 }
 
 .feedback{
-<<<<<<< HEAD
-    background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
-  
-    border-radius: 2rem;
-    
-    display: flex;
-    // flex-direction: column;
-    // height: 90rem;
-   
-    align-items: center;
-    color: $color-white;
-    transition: transform 0.5s ease;
-    overflow: hidden;
-=======
     position: relative;
     // background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
   
@@ -1180,15 +1129,10 @@ overflow-x: hidden;
     // width: 100vw;
     // flex-wrap:wrap;
     
->>>>>>> testCarousel
     
 
 
 &-item{
-<<<<<<< HEAD
-    padding: 4rem 2rem;
-    flex: 0 0 100%;
-=======
   position: absolute;
     // float: left;
     // flex-grow: 1;
@@ -1218,7 +1162,6 @@ overflow-x: hidden;
     
     
 
->>>>>>> testCarousel
 }
 
     &__header{

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-.header {
-    position: sticky;
-=======
 #backdrop{
     position: fixed;
     left: 0;
@@ -25,7 +20,6 @@
 }
 .header {
     position: relative;
->>>>>>> testCarousel
     top: 0;
     width: 100%;
     display: flex;
@@ -77,31 +71,12 @@
         }
     }
 
-<<<<<<< HEAD
-    &__backdrop{
-        
-       
-        display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-    }
-=======
->>>>>>> testCarousel
 
     &__dropdown {
         
        
         position: fixed;
-<<<<<<< HEAD
-        top: 10rem;
-=======
         top: 9.5rem;
->>>>>>> testCarousel
         left: 0;
         width: 60%;
         height: 90vh;
@@ -125,14 +100,11 @@
             @include media-query($large-laptops) {
                 padding-left: 10rem;
             }
-<<<<<<< HEAD
-=======
 
            
               
        
             
->>>>>>> testCarousel
         }
 
     }
@@ -189,12 +161,9 @@
         }
 
         &__navigation--list  li a{
-<<<<<<< HEAD
-=======
              
 
          
->>>>>>> testCarousel
 
             li:hover {
                 cursor: pointer;
@@ -207,11 +176,7 @@
 
         &--list {
 
-<<<<<<< HEAD
-
-=======
            
->>>>>>> testCarousel
             display: flex;
 
             list-style-type: none;
@@ -222,19 +187,6 @@
             li a:active{
                 font-weight: 900;
             }
-<<<<<<< HEAD
-
-            li a{
-                list-style-type: none;
-                font-size: 1.8rem;
-                color: $color-tertiary-light;   
-                font-weight: 500;
-                text-decoration: none;
-               
-
-                
-            }
-=======
             li{
 
                 &:hover {
@@ -277,24 +229,11 @@
             }
 
             
->>>>>>> testCarousel
            
 
             
 
-<<<<<<< HEAD
-            li:hover {
-                cursor: pointer;
-            }
-
-
-            li:not(:last-child) {
-                margin-right: 4rem;
-            }
-
-=======
            
->>>>>>> testCarousel
         }
     }
 
