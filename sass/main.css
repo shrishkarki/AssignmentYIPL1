@@ -47,6 +47,10 @@ body {
   overflow: hidden;
 }
 
+.ham-icon {
+  transition: all 0.3s ease-in;
+}
+
 .header {
   position: relative;
   top: 0;
@@ -129,6 +133,12 @@ body {
 .header-toggle {
   display: block;
 }
+.header-toggle label > div {
+  height: 0.3rem;
+  width: 2.8rem;
+  background-color: black;
+  margin-top: 0.7rem;
+}
 @media (min-width: 992px) {
   .header-toggle {
     display: none;
@@ -145,12 +155,6 @@ body {
 }
 .header-toggle input[type=checkbox]:checked ~ .ham + nav.header__dropdown {
   transform: translate(0);
-}
-.header-toggle input[type=checkbox]:checked ~ label.close {
-  display: block;
-}
-.header-toggle input[type=checkbox]:checked ~ label.open {
-  display: none;
 }
 .header__navigation {
   display: none;

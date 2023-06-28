@@ -18,6 +18,10 @@
 .overflow-hidden{
     overflow:hidden;
 }
+
+.ham-icon{
+    transition: all 0.3s ease-in;
+}
 .header {
     position: relative;
     top: 0;
@@ -113,6 +117,13 @@
 
     &-toggle {
 
+        & label > div{
+            height: 0.3rem ;
+            width: 2.8rem;
+            background-color: black;
+            margin-top: 0.7rem;
+        }
+
         display: block;
 
         @include media-query($laptops) {
@@ -135,19 +146,15 @@
             transform: translate(0);
         }
 
-        input[type="checkbox"]:checked~label.close {
-            display: block;
-        }
-
-        input[type="checkbox"]:checked~label.open {
-            display: none;
-        }
-
-        // for backdrop
-        // input[type="checkbox"]:checked~.header__backdrop {
-
+        // input[type="checkbox"]:checked~label.close {
         //     display: block;
         // }
+
+        // input[type="checkbox"]:checked~label.open {
+        //     display: none;
+        // }
+
+       
     }
 
 
