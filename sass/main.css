@@ -1147,7 +1147,8 @@ body {
   position: relative;
   z-index: 10;
   width: 100%;
-  height: 50rem;
+  height: 48rem;
+  overflow-x: hidden;
 }
 .carousel::before {
   content: " ";
@@ -1206,10 +1207,12 @@ body {
   }
 }
 .carousel-buttons {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 4rem;
+  margin-bottom: 10rem;
 }
 @media (min-width: 992px) {
   .carousel-buttons {
@@ -1222,7 +1225,7 @@ body {
   border-radius: 50%;
   margin: 0 1rem;
   background-color: #5393F3;
-  opacity: 30%;
+  opacity: 50%;
 }
 @media (min-width: 992px) {
   .carousel-buttons-dots {
