@@ -1,6 +1,31 @@
+<<<<<<< HEAD
 
 .header {
     position: sticky;
+=======
+#backdrop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateY(97px);
+    width: 100%;
+    opacity: 75%;
+    z-index: -10000;
+    height: 100vh;
+    background-color: black;
+    display: none;
+    
+}
+.backdrop-display{
+    display: block !important;
+}
+
+.overflow-hidden{
+    overflow:hidden;
+}
+.header {
+    position: relative;
+>>>>>>> testCarousel
     top: 0;
     width: 100%;
     display: flex;
@@ -52,6 +77,7 @@
         }
     }
 
+<<<<<<< HEAD
     &__backdrop{
         
        
@@ -64,12 +90,18 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
     }
+=======
+>>>>>>> testCarousel
 
     &__dropdown {
         
        
         position: fixed;
+<<<<<<< HEAD
         top: 10rem;
+=======
+        top: 9.5rem;
+>>>>>>> testCarousel
         left: 0;
         width: 60%;
         height: 90vh;
@@ -93,6 +125,14 @@
             @include media-query($large-laptops) {
                 padding-left: 10rem;
             }
+<<<<<<< HEAD
+=======
+
+           
+              
+       
+            
+>>>>>>> testCarousel
         }
 
     }
@@ -149,6 +189,12 @@
         }
 
         &__navigation--list  li a{
+<<<<<<< HEAD
+=======
+             
+
+         
+>>>>>>> testCarousel
 
             li:hover {
                 cursor: pointer;
@@ -161,7 +207,11 @@
 
         &--list {
 
+<<<<<<< HEAD
 
+=======
+           
+>>>>>>> testCarousel
             display: flex;
 
             list-style-type: none;
@@ -172,6 +222,7 @@
             li a:active{
                 font-weight: 900;
             }
+<<<<<<< HEAD
 
             li a{
                 list-style-type: none;
@@ -183,10 +234,55 @@
 
                 
             }
+=======
+            li{
+
+                &:hover {
+                    cursor: pointer;
+                }
+    
+    
+                &:not(:last-child) {
+                    margin-right: 4rem;
+                }
+     
+                position: relative;
+                a{
+                    list-style-type: none;
+                    font-size: 1.8rem;
+                    color: $color-tertiary-light;   
+                    font-weight: 500;
+                    text-decoration: none;
+    
+                      
+                &::after{
+                    content: " ";
+                    position: absolute;
+                    background-color: #7D7987;
+                    height: 2px;
+                    width: 100%;
+                    bottom: -3px;
+                     left: 0;
+                     transition: 0.3s;
+                     transition-timing-function: ease-in-out;
+                     transform: scaleX(0);  
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                 }
+                   
+    
+                    
+                }
+            }
+
+            
+>>>>>>> testCarousel
            
 
             
 
+<<<<<<< HEAD
             li:hover {
                 cursor: pointer;
             }
@@ -196,6 +292,9 @@
                 margin-right: 4rem;
             }
 
+=======
+           
+>>>>>>> testCarousel
         }
     }
 
