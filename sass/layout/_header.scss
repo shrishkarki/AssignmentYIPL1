@@ -219,15 +219,16 @@
                     position: absolute;
                     background-color: #7D7987;
                     height: 2px;
-                    width: 100%;
+                    width: 0%;
                     bottom: -3px;
                      left: 0;
                      transition: 0.3s;
                      transition-timing-function: ease-in-out;
-                     transform: scaleX(0);  
+                    //  transform: scaleX(0);  
                 }
                 &:hover::after{
-                    transform: scaleX(1);
+                    // transform: scaleX(1);
+                    width: 100%;
                  }
                    
     
